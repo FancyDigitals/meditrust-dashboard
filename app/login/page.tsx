@@ -370,11 +370,11 @@ export default function LoginPage() {
                   Adegunle Kanyinsola Olayinka
                 </p>
                 <p className="text-[11px] text-slate-400 mt-0.5">
-                  MSc Cybersecurity Researcher
-                </p>
-                <p className="text-[10px] text-slate-600 mt-1">
-                  Academic Demonstration Project
-                </p>
+  MIT Final Year Project
+</p>
+<p className="text-[10px] text-slate-600 mt-1">
+  Academic Demonstration
+</p>
               </div>
             </div>
           </div>

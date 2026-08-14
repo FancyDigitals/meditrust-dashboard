@@ -5,7 +5,7 @@ const pillars = [
     icon: Shield,
     title: "Never Trust, Always Verify",
     dissertation:
-      "Rose et al. (2020) argue that Zero Trust Architecture does not believe in implicit trust — access decisions are based on continuous evaluation of identity, device, application, data, and security policy.",
+      "Rose et al. (2020) argue that Zero Trust Architecture does not believe in implicit trust access decisions are based on continuous evaluation of identity, device, application, data, and security policy.",
     implementation:
       "Every access request in this simulation passes through identity verification, MFA, risk evaluation, role check, and permission check before a decision is made.",
     color: "text-blue-500",
@@ -45,7 +45,7 @@ const pillars = [
     icon: Database,
     title: "Data Protection",
     dissertation:
-      "EHR systems contain clinical histories, diagnoses, prescription data, laboratory test results, billing data and other forms of sensitive health information — protecting EHRs is essential for patient privacy and institutional trust.",
+      "EHR systems contain clinical histories, diagnoses, prescription data, laboratory test results, billing data and other forms of sensitive health information, protecting EHRs is essential for patient privacy and institutional trust.",
     implementation:
       "All three Azure storage containers (patient-records, admin-records, audit-evidence) are configured as Private with anonymous access disabled, secure transfer enforced, and TLS 1.2+ required.",
     color: "text-red-500",
@@ -57,7 +57,7 @@ const pillars = [
     dissertation:
       "Cresswell et al. (2022) noted that cloud adoption in healthcare brings governance, security, privacy, and implementation challenges. While cloud computing can improve healthcare efficiency, it increases the responsibility to protect sensitive patient information.",
     implementation:
-      "The simulated environment uses Microsoft Azure with Entra ID, RBAC, Conditional Access, private storage, and audit logging — each corresponding to a documented governance control.",
+      "The simulated environment uses Microsoft Azure with Entra ID, RBAC, Conditional Access, private storage, and audit logging each corresponding to a documented governance control.",
     color: "text-sky-500",
     bg: "bg-sky-50",
   },
@@ -65,7 +65,7 @@ const pillars = [
     icon: Activity,
     title: "Continuous Monitoring",
     dissertation:
-      "Traditional perimeter-based security models assume inside users or devices can be trusted. This is no longer appropriate — access must be continuously re-verified rather than assumed once login is successful.",
+      "Traditional perimeter-based security models assume inside users or devices can be trusted. This is no longer appropriate access must be continuously re-verified rather than assumed once login is successful.",
     implementation:
       "Every simulated access event is logged with the user, action, resource, risk level, and result. The Activity Logs page provides a filterable audit trail of all security decisions.",
     color: "text-indigo-500",
@@ -76,7 +76,7 @@ const pillars = [
 const azureComponents = [
   { label: "Microsoft Entra ID",        purpose: "Identity and authentication platform" },
   { label: "Entra Security Groups",     purpose: "EHR-Doctors, EHR-Nurses, EHR-Vendors, EHR-Auditors, EHR-Cloud-Admins, EHR-IT-Security, EHR-Records-Admins" },
-  { label: "Azure RBAC",                purpose: "Role-based access control — least privilege per container" },
+  { label: "Azure RBAC",                purpose: "Role-based access control least privilege per container" },
   { label: "Conditional Access CA001",  purpose: "Require MFA for all EHR user groups" },
   { label: "Conditional Access CA002",  purpose: "Block high-risk sign-ins immediately" },
   { label: "Conditional Access CA003",  purpose: "Require MFA for medium-risk sign-ins" },
@@ -136,11 +136,11 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-3 text-[11px]">
               <span className="bg-white/10 px-2.5 py-1 rounded-full">
-                Author: Adegunle Kanyinsola Olayinka
-              </span>
-              <span className="bg-white/10 px-2.5 py-1 rounded-full">
-                Academic Demonstration Project
-              </span>
+  Author: Adegunle Kanyinsola Olayinka
+</span>
+<span className="bg-white/10 px-2.5 py-1 rounded-full">
+  MIT Final Year Project
+</span>
               <span className="bg-white/10 px-2.5 py-1 rounded-full">
                 Platform: Microsoft Azure
               </span>
@@ -161,7 +161,7 @@ export default function AboutPage() {
             </p>
             <p className="text-[13px] text-slate-500 max-w-xl mx-auto leading-relaxed">
               Traditional perimeter-based security models assume inside users can be trusted once they are on the network. 
-              Zero Trust Architecture removes this assumption entirely. Every access request — regardless of origin — 
+              Zero Trust Architecture removes this assumption entirely. Every access request regardless of origin 
               must be verified against identity, MFA, risk, role, and permission before access is granted.
             </p>
           </div>
@@ -257,7 +257,7 @@ export default function AboutPage() {
               { page: "Access Control",     demonstrates: "Least-privilege permission matrix across all three private Azure storage containers" },
               { page: "Security Policies",  demonstrates: "CA001–CA004 Conditional Access policies including MFA enforcement and risk-based blocking" },
               { page: "Activity Logs",      demonstrates: "Simulated audit trail of access events, denials, blocks, and MFA challenges" },
-              { page: "Test Access",        demonstrates: "Live permission engine — select a user, resource and action to see a real Zero Trust access decision" },
+              { page: "Test Access",        demonstrates: "Live permission engine select a user, resource and action to see a real Zero Trust access decision" },
             ].map((item) => (
               <div key={item.page} className="border border-slate-200 rounded-lg p-3.5">
                 <p className="text-[12px] font-bold text-slate-900 mb-1">{item.page}</p>
