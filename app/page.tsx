@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { ShieldCheck, Lock, KeyRound, Database, CheckCircle2 } from "lucide-react";
 import Chip from "@/components/Chip";
-import { flowSteps, activity, permissionMatrix } from "@/lib/data";
+import { flowSteps, activity } from "@/lib/data";
 
 const overviewCards = [
-  { label: "Identity",        status: "Protected", detail: "Microsoft Entra ID",       sub: "7 simulated users",        icon: ShieldCheck, color: "text-emerald-500", bg: "bg-emerald-50" },
-  { label: "Access Control",  status: "Protected", detail: "Azure RBAC",               sub: "Least privilege enforced", icon: Lock,        color: "text-blue-500",    bg: "bg-blue-50"    },
-  { label: "Authentication",  status: "Protected", detail: "MFA + Conditional Access", sub: "Risk-based verification",  icon: KeyRound,    color: "text-emerald-500", bg: "bg-emerald-50" },
-  { label: "Data Security",   status: "Protected", detail: "Private Azure Storage",    sub: "TLS 1.2+ enforced",        icon: Database,    color: "text-blue-500",    bg: "bg-blue-50"    },
+  { label: "Identity",       status: "Protected", detail: "Microsoft Entra ID",       sub: "7 simulated users",        icon: ShieldCheck, color: "text-emerald-500", bg: "bg-emerald-50" },
+  { label: "Access Control", status: "Protected", detail: "Azure RBAC",               sub: "Least privilege enforced", icon: Lock,        color: "text-blue-500",    bg: "bg-blue-50"    },
+  { label: "Authentication", status: "Protected", detail: "MFA + Conditional Access", sub: "Risk-based verification",  icon: KeyRound,    color: "text-emerald-500", bg: "bg-emerald-50" },
+  { label: "Data Security",  status: "Protected", detail: "Private Azure Storage",    sub: "TLS 1.2+ enforced",        icon: Database,    color: "text-blue-500",    bg: "bg-blue-50"    },
 ];
 
 const resultStyle: Record<string, string> = {
@@ -30,8 +30,6 @@ export default function DashboardPage() {
 
   return (
     <div className="p-5 space-y-6">
-
-      {/* Header */}
       <div>
         <div className="flex items-center gap-2.5">
           <h1 className="text-xl font-bold text-slate-900 tracking-tight">Zero Trust Security</h1>
@@ -39,10 +37,9 @@ export default function DashboardPage() {
             Academic Demo
           </span>
         </div>
-        <p className="text-[13px] text-slate-400 mt-1">MediTrust Health Cloud - Simulated Azure EHR Environment</p>
+        <p className="text-[13px] text-slate-400 mt-1">Hallmark Medical Center — Simulated Azure EHR Environment</p>
       </div>
 
-      {/* Overview cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         {overviewCards.map((card) => {
           const Icon = card.icon;
@@ -61,8 +58,6 @@ export default function DashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
-
-        {/* Flow */}
         <div className="xl:col-span-2 bg-white border border-slate-200 rounded-lg shadow-sm">
           <div className="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between">
             <p className="text-[13px] font-semibold text-slate-900">Access Verification Flow</p>
@@ -74,37 +69,28 @@ export default function DashboardPage() {
                 <div key={step.label} className="flex items-center gap-1 flex-shrink-0">
                   <button
                     onClick={() => setActiveStep(activeStep === i ? null : i)}
-                    className={`
-                      flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-lg border text-[10px] font-medium transition-all
+                    className={`flex flex-col items-center justify-center gap-1 w-16 h-14 rounded-lg border text-[10px] font-medium transition-all
                       ${activeStep === i
                         ? "border-blue-400 bg-blue-50 text-blue-700"
                         : "border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:bg-blue-50/50"
-                      }
-                    `}
+                      }`}
                   >
                     <span className="text-base leading-none">{step.icon}</span>
                     <span className="leading-tight text-center">{step.label}</span>
                   </button>
-                  {i < flowSteps.length - 1 && (
-                    <span className="text-slate-300 text-sm">→</span>
-                  )}
+                  {i < flowSteps.length - 1 && <span className="text-slate-300 text-sm">→</span>}
                 </div>
               ))}
             </div>
             {activeStep !== null && (
               <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                <p className="text-[12px] font-semibold text-blue-800 mb-1">
-                  {flowSteps[activeStep].label}
-                </p>
-                <p className="text-[12px] text-blue-700 leading-relaxed">
-                  {flowSteps[activeStep].tooltip}
-                </p>
+                <p className="text-[12px] font-semibold text-blue-800 mb-1">{flowSteps[activeStep].label}</p>
+                <p className="text-[12px] text-blue-700 leading-relaxed">{flowSteps[activeStep].tooltip}</p>
               </div>
             )}
           </div>
         </div>
 
-        {/* Zero Trust Coverage */}
         <div className="bg-white border border-slate-200 rounded-lg shadow-sm">
           <div className="px-5 py-3.5 border-b border-slate-100">
             <p className="text-[13px] font-semibold text-slate-900">Zero Trust Coverage</p>
@@ -136,7 +122,6 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Activity */}
       <div className="bg-white border border-slate-200 rounded-lg shadow-sm">
         <div className="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between flex-wrap gap-2">
           <p className="text-[13px] font-semibold text-slate-900">Recent Security Activity</p>
@@ -166,15 +151,12 @@ export default function DashboardPage() {
               <span className="text-[12px] font-semibold text-slate-800 w-32 truncate flex-shrink-0">{ev.user}</span>
               <span className="text-[12px] text-slate-600 flex-1">{ev.event}</span>
               <span className="text-[11px] text-slate-400 hidden sm:block flex-shrink-0 w-28">{ev.resource}</span>
-              <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full flex-shrink-0 ${resultStyle[ev.type]}`}>
-                {ev.result}
-              </span>
+              <span className={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full flex-shrink-0 ${resultStyle[ev.type]}`}>{ev.result}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Access control summary table */}
       <div className="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
         <div className="px-5 py-3.5 border-b border-slate-100">
           <p className="text-[13px] font-semibold text-slate-900">Access Control Summary</p>
@@ -190,13 +172,13 @@ export default function DashboardPage() {
             </thead>
             <tbody className="divide-y divide-slate-100">
               {[
-                ["Doctor User",           "Doctor",        "Patient Records", "Read / Write", "Allowed"],
-                ["Nurse User",            "Nurse",         "Patient Records", "Read Only",    "Allowed"],
-                ["Records Admin User",    "Records Admin", "Admin Records",   "Read",         "Allowed"],
-                ["Auditor User",          "Auditor",       "Audit Evidence",  "Read",         "Allowed"],
-                ["Vendor User",           "Vendor",        "Patient Records", "None",         "Denied" ],
-                ["Cloud Admin User",      "Cloud Admin",   "All Resources",   "Admin",        "Allowed"],
-                ["IT Security Admin User","IT Security",   "Audit Evidence",  "Read",         "Allowed"],
+                ["Doctor User","Doctor","Patient Records","Read / Write","Allowed"],
+                ["Nurse User","Nurse","Patient Records","Read Only","Allowed"],
+                ["Records Admin User","Records Admin","Admin Records","Read","Allowed"],
+                ["Auditor User","Auditor","Audit Evidence","Read","Allowed"],
+                ["Vendor User","Vendor","Patient Records","None","Denied"],
+                ["Cloud Admin User","Cloud Admin","All Resources","Admin","Allowed"],
+                ["IT Security Admin User","IT Security","Audit Evidence","Read","Allowed"],
               ].map(([u, r, res, p, s]) => (
                 <tr key={u} className="hover:bg-slate-50 transition-colors">
                   <td className="px-4 py-3 font-semibold text-slate-900">{u}</td>
@@ -210,7 +192,6 @@ export default function DashboardPage() {
           </table>
         </div>
       </div>
-
     </div>
   );
 }

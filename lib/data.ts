@@ -2,7 +2,7 @@ export const users = [
   {
     id: 1,
     name: "Doctor User",
-    username: "dr.user@meditrust.demo",
+    username: "dr.user@hallmark.health",
     role: "Doctor",
     group: "EHR-Doctors",
     access: "Patient Records",
@@ -15,7 +15,7 @@ export const users = [
   {
     id: 2,
     name: "Nurse User",
-    username: "nurse.user@meditrust.demo",
+    username: "nurse.user@hallmark.health",
     role: "Nurse",
     group: "EHR-Nurses",
     access: "Patient Records (Read)",
@@ -28,7 +28,7 @@ export const users = [
   {
     id: 3,
     name: "Records Admin User",
-    username: "records.admin@meditrust.demo",
+    username: "records.admin@hallmark.health",
     role: "Records Admin",
     group: "EHR-Records-Admins",
     access: "Admin Records",
@@ -41,7 +41,7 @@ export const users = [
   {
     id: 4,
     name: "IT Security Admin User",
-    username: "it.security@meditrust.demo",
+    username: "it.security@hallmark.health",
     role: "IT Security Admin",
     group: "EHR-IT-Security",
     access: "Monitoring / Logs",
@@ -54,7 +54,7 @@ export const users = [
   {
     id: 5,
     name: "Cloud Admin User",
-    username: "cloud.admin@meditrust.demo",
+    username: "cloud.admin@hallmark.health",
     role: "Cloud Admin",
     group: "EHR-Cloud-Admins",
     access: "Azure Infrastructure",
@@ -67,7 +67,7 @@ export const users = [
   {
     id: 6,
     name: "Vendor User",
-    username: "vendor.user@meditrust.demo",
+    username: "vendor.user@hallmark.health",
     role: "Vendor",
     group: "EHR-Vendors",
     access: "None — Restricted",
@@ -80,7 +80,7 @@ export const users = [
   {
     id: 7,
     name: "Auditor User",
-    username: "auditor.user@meditrust.demo",
+    username: "auditor.user@hallmark.health",
     role: "Auditor",
     group: "EHR-Auditors",
     access: "Audit Evidence",
@@ -153,7 +153,7 @@ export const policies = [
     target: "All EHR Groups",
     exception: "Emergency Access Account",
     purpose:
-      "Ensures every simulated EHR user must complete multifactor authentication before accessing any resource. The emergency access account is excluded to preserve break-glass access.",
+      "Ensures every EHR user must complete multifactor authentication before accessing any resource. The emergency access account is excluded to preserve break-glass access.",
   },
   {
     id: "CA002",

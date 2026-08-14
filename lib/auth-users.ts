@@ -17,7 +17,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "1",
     name: "Doctor User",
-    username: "dr.user@meditrust.demo",
+    username: "dr.user@hallmark.health",
     password: "Doctor@2024",
     role: "Doctor",
     group: "EHR-Doctors",
@@ -31,7 +31,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "2",
     name: "Nurse User",
-    username: "nurse.user@meditrust.demo",
+    username: "nurse.user@hallmark.health",
     password: "Nurse@2024",
     role: "Nurse",
     group: "EHR-Nurses",
@@ -45,7 +45,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "3",
     name: "Records Admin User",
-    username: "records.admin@meditrust.demo",
+    username: "records.admin@hallmark.health",
     password: "Records@2024",
     role: "Records Admin",
     group: "EHR-Records-Admins",
@@ -59,7 +59,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "4",
     name: "IT Security Admin User",
-    username: "it.security@meditrust.demo",
+    username: "it.security@hallmark.health",
     password: "ITSec@2024",
     role: "IT Security Admin",
     group: "EHR-IT-Security",
@@ -73,7 +73,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "5",
     name: "Cloud Admin User",
-    username: "cloud.admin@meditrust.demo",
+    username: "cloud.admin@hallmark.health",
     password: "Cloud@2024",
     role: "Cloud Admin",
     group: "EHR-Cloud-Admins",
@@ -87,7 +87,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "6",
     name: "Vendor User",
-    username: "vendor.user@meditrust.demo",
+    username: "vendor.user@hallmark.health",
     password: "Vendor@2024",
     role: "Vendor",
     group: "EHR-Vendors",
@@ -101,7 +101,7 @@ export const authUsers: AuthUser[] = [
   {
     id: "7",
     name: "Auditor User",
-    username: "auditor.user@meditrust.demo",
+    username: "auditor.user@hallmark.health",
     password: "Auditor@2024",
     role: "Auditor",
     group: "EHR-Auditors",

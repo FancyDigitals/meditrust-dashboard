@@ -44,8 +44,8 @@ export default function WelcomeModal() {
         Zero Trust Security
       </p>
       <h2 className="text-[22px] font-extrabold text-slate-900 tracking-tight mb-1">
-        MediTrust Health Cloud
-      </h2>
+  Hallmark Medical Center
+</h2>
       <p className="text-[13px] text-slate-400 mb-6">
         Security Dashboard — Academic Demonstration
       </p>

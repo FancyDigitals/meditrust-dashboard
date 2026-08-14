@@ -13,29 +13,26 @@ import {
   X,
 } from "lucide-react";
 
-// Replace the entire nav array with this
 const nav = [
   {
     section: "Overview",
     items: [
-      { href: "/",       label: "Dashboard", icon: LayoutDashboard },
-      { href: "/about",  label: "About",     icon: BookOpen        },
+      { href: "/", label: "Dashboard", icon: LayoutDashboard },
+      { href: "/about", label: "About", icon: BookOpen },
     ],
   },
   {
     section: "Security",
     items: [
-      { href: "/users",          label: "Users",             icon: Users       },
-      { href: "/access-control", label: "Access Control",    icon: Lock        },
-      { href: "/policies",       label: "Security Policies", icon: ShieldCheck },
-      { href: "/activity",       label: "Activity Logs",     icon: Activity    },
+      { href: "/users", label: "Users", icon: Users },
+      { href: "/access-control", label: "Access Control", icon: Lock },
+      { href: "/policies", label: "Security Policies", icon: ShieldCheck },
+      { href: "/activity", label: "Activity Logs", icon: Activity },
     ],
   },
   {
     section: "Demonstration",
-    items: [
-      { href: "/test-access", label: "Test Access", icon: FlaskConical },
-    ],
+    items: [{ href: "/test-access", label: "Test Access", icon: FlaskConical }],
   },
 ];
 
@@ -49,7 +46,6 @@ export default function Sidebar({ open, onClose }: Props) {
 
   return (
     <>
-      {/* Mobile overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-40 lg:hidden"
@@ -65,10 +61,9 @@ export default function Sidebar({ open, onClose }: Props) {
           lg:translate-x-0
         `}
       >
-        {/* Brand */}
         <div className="px-5 py-5 border-b border-slate-800 flex items-start justify-between">
           <div>
-            <p className="text-white font-bold text-sm tracking-tight">MediTrust</p>
+            <p className="text-white font-bold text-sm tracking-tight">Hallmark Medical</p>
             <p className="text-slate-500 text-[10px] font-semibold uppercase tracking-widest mt-0.5">
               Zero Trust
             </p>
@@ -81,7 +76,6 @@ export default function Sidebar({ open, onClose }: Props) {
           </button>
         </div>
 
-        {/* Nav */}
         <nav className="flex-1 py-4 overflow-y-auto">
           {nav.map((section) => (
             <div key={section.section} className="mb-2">
@@ -113,7 +107,6 @@ export default function Sidebar({ open, onClose }: Props) {
           ))}
         </nav>
 
-        {/* Footer */}
         <div className="px-5 py-4 border-t border-slate-800">
           <p className="text-[11px] font-semibold text-slate-500">Academic Demonstration</p>
           <p className="text-[10px] text-slate-700 mt-1 leading-relaxed">

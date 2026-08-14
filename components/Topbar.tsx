@@ -28,7 +28,7 @@ export default function Topbar({ title, onMenuClick }: Props) {
       <div className="flex-1">
         <p className="text-[14px] font-semibold text-slate-900">{title}</p>
         <p className="text-[11px] text-slate-400 leading-none mt-0.5">
-          MediTrust Health Cloud
+          Hallmark Medical Center
         </p>
       </div>
 
@@ -42,7 +42,6 @@ export default function Topbar({ title, onMenuClick }: Props) {
           Protected
         </span>
 
-        {/* User dropdown */}
         {user && (
           <div className="relative">
             <button
@@ -74,19 +73,15 @@ export default function Topbar({ title, onMenuClick }: Props) {
                 />
                 <div className="absolute right-0 top-full mt-1.5 w-56 bg-white border border-slate-200 rounded-xl shadow-lg z-20 overflow-hidden">
                   <div className="px-4 py-3 border-b border-slate-100 bg-slate-50">
-                    <p className="text-[12px] font-bold text-slate-900">
-                      {user.name}
-                    </p>
-                    <p className="text-[11px] text-slate-400 mt-0.5 truncate">
-                      {user.email}
-                    </p>
+                    <p className="text-[12px] font-bold text-slate-900">{user.name}</p>
+                    <p className="text-[11px] text-slate-400 mt-0.5 truncate">{user.email}</p>
                   </div>
                   <div className="px-4 py-2.5 border-b border-slate-100 space-y-1.5">
                     {[
-                      ["Role",   user.role  ],
-                      ["Group",  user.group ],
+                      ["Role", user.role],
+                      ["Group", user.group],
                       ["Access", user.access],
-                      ["MFA",    user.mfa ?? "Required"],
+                      ["MFA", user.mfa ?? "Required"],
                     ].map(([label, value]) => (
                       <div key={label} className="flex justify-between text-[11px]">
                         <span className="text-slate-400">{label}</span>
