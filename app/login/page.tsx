@@ -31,13 +31,13 @@ const LOGIN_STEPS = [
   {
     id: "dns",
     label: "Resolving secure endpoint",
-    detail: "Connecting to MediTrust Health Cloud authentication gateway",
+    detail: "Connecting to Hallmark Medical Center Health Cloud authentication gateway",
     icon: MonitorCheck,
   },
   {
     id: "tls",
     label: "Establishing TLS 1.2+ encrypted channel",
-    detail: "Secure transfer enforced — all traffic encrypted in transit",
+    detail: "Secure transfer enforced all traffic encrypted in transit",
     icon: Lock,
   },
   {
@@ -315,7 +315,7 @@ export default function LoginPage() {
                 <ShieldCheck size={20} className="text-white" />
               </div>
               <div>
-                <p className="text-white font-bold text-[15px] tracking-tight">MediTrust</p>
+                <p className="text-white font-bold text-[15px] tracking-tight">Hallmark Medical Center</p>
                 <p className="text-slate-500 text-[10px] font-semibold uppercase tracking-widest">
                   Zero Trust
                 </p>
@@ -392,7 +392,7 @@ export default function LoginPage() {
               <ShieldCheck size={26} className="text-white" />
             </div>
             <h1 className="text-[20px] font-extrabold text-white tracking-tight">
-              MediTrust Health Cloud
+              Hallmark Medical Center Cloud
             </h1>
             <p className="text-[12px] text-slate-400 mt-1">
               Zero Trust Security Dashboard
@@ -468,7 +468,7 @@ export default function LoginPage() {
                           type="text"
                           value={username}
                           onChange={(e) => setUsername(e.target.value)}
-                          placeholder="user@meditrust.demo"
+                          placeholder="user@hallmarkmedicalcenter.demo"
                           required
                           className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-lg text-[13px] text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent"
                         />

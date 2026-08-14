@@ -92,7 +92,7 @@ export default function AccessControlPage() {
         </div>
         <div className="p-5 font-mono text-[12px] text-slate-600 leading-8">
           <p><span className="font-bold text-slate-900">Azure Storage Account</span></p>
-          <p className="pl-5">└── <span className="font-bold text-slate-900">MediTrust EHR Storage</span></p>
+          <p className="pl-5">└── <span className="font-bold text-slate-900">Hallmark Medical Center EHR Storage</span></p>
           {resources.map((r, i) => (
             <div key={r.id}>
               <p className="pl-10">{i < resources.length - 1 ? "├──" : "└──"} <span className="text-blue-600 font-bold">{r.label}</span> <span className="text-[10px] font-sans font-bold bg-red-50 text-red-700 border border-red-200 px-1.5 py-0.5 rounded ml-1">PRIVATE</span></p>
