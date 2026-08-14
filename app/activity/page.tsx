@@ -26,7 +26,7 @@ export default function ActivityPage() {
     <div className="p-5 space-y-5">
       <div>
         <h1 className="text-xl font-bold text-slate-900 tracking-tight">Activity Logs</h1>
-        <p className="text-[13px] text-slate-400 mt-1">Security events and audit activity — Demonstration data</p>
+        <p className="text-[13px] text-slate-400 mt-1">Security events and audit activity - Demonstration data</p>
       </div>
 
       <div className="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">

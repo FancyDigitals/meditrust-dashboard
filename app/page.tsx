@@ -39,7 +39,7 @@ export default function DashboardPage() {
             Academic Demo
           </span>
         </div>
-        <p className="text-[13px] text-slate-400 mt-1">MediTrust Health Cloud — Simulated Azure EHR Environment</p>
+        <p className="text-[13px] text-slate-400 mt-1">MediTrust Health Cloud - Simulated Azure EHR Environment</p>
       </div>
 
       {/* Overview cards */}

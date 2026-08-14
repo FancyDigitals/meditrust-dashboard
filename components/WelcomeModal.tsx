@@ -70,7 +70,7 @@ export default function WelcomeModal() {
               Adegunle Kanyinsola Olayinka
             </p>
             <p className="text-[11px] text-slate-400 mt-1">
-              MSc Cybersecurity Researcher
+              MIT Final Year Project
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function WelcomeModal() {
           {
             icon: ShieldCheck,
             title: "Zero Trust Architecture",
-            desc: "Every access request is verified through identity, MFA, risk, role, and permission — never trusted automatically.",
+            desc: "Every access request is verified through identity, MFA, risk, role, and permission never trusted automatically.",
             color: "text-emerald-500",
             bg: "bg-emerald-50",
           },

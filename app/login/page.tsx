@@ -411,7 +411,7 @@ export default function LoginPage() {
                 <p className="text-[12px] font-bold text-white">
                   Adegunle Kanyinsola Olayinka
                 </p>
-                <p className="text-[10px] text-slate-400">MSc Cybersecurity Researcher</p>
+                <p className="text-[10px] text-slate-400">MIT Final Year Project</p>
               </div>
             </div>
             <span className="inline-block mt-3 text-[10px] font-semibold uppercase tracking-widest bg-amber-500/10 text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full">
